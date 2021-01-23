@@ -36,7 +36,7 @@ Finance control platform.
 
 ## 🔖 Layout
 
-You can view the layout of this project by clicking [here]()
+You can view the layout of this project by clicking [here](https://devfinances.herokuapp.com/)
 
 ## ⬆ Updates
 
