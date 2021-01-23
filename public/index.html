@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta http-equiv="content-style-type" content="text/css">
+  <meta name="copyright" content="2021 Roger">
+  <meta name="description" content="Aplicação web para controle de finanças pessoais.">
+  <meta name="keywords" content="Controle, Finanças, Pessoais, Dinheiro">
+  <meta name="robots" content="index, follow">
+  <meta name="generator" content="Sublime Text 3">
+  <meta name="rating" content="general">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Roger Fernando">
+  <meta name="revisit-after" content="15 days">
+  <meta name="DC.creator.address" content="rogerluiz010@gmail.com">
+  <meta name="DC.publisher" content="Roger">
+  <meta name="Custodian" content="Roger">
+  <meta name="DC.date.created" content="2021-01-15">
+  <meta name="DC.date.modified" content="2021-01-18">
+  <meta name="DC.Identifier" content=""> <!-- URL do documento. -->
+  <meta name="DC.format" content="text/html">
+
+  <title>dev.finance$</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="icon" type="image/svg" sizes="58" href="assets/favicon.svg">
+
+  <script src="./scripts/index.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+
+  <header>
+    <img src="./assets/logo.svg" alt="Logo Dev Finance">
+  </header>
+
+  <main class="container">
+    <section id="balance">
+      <h2 class="sr-only">Balanço</h2>
+
+      <div class="card">
+        <h3>
+          <span>Entradas</span>
+          <img src="./assets/income.svg" alt="Imagem de entradas">
+        </h3>
+        <p>R$ 5.000,00</p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Saídas</span>
+          <img src="./assets/expense.svg" alt="Imagem de saídas">
+        </h3>
+        <p>R$ 2.000,00</p>
+      </div>
+
+      <div class="card total">
+        <h3>
+          <span>Total</span>
+          <img src="./assets/total.svg" alt="Imagem de total">
+        </h3>
+        <p>R$ 3.000,00</p>
+      </div>
+    </section>
+
+    <section id="transaction">
+      <h2 class="sr-only">Transações</h2>
+
+      <a href="#" class="button new" id="new-transaction">+ Nova Transação</a>
+
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="descritpion">Luz</td>
+            <td class="expense">- R$ 500,00</td>
+            <td class="date">23/01/2021</td>
+            <td>
+              <img src="./assets/minus.svg" alt="Remover transação">
+            </td>
+          </tr>
+          <tr>
+            <td class="descritpion">Criação de Website</td>
+            <td class="income">R$ 5.000,00</td>
+            <td class="date">23/01/2021</td>
+            <td>
+              <img src="./assets/minus.svg" alt="Remover transação">
+            </td>
+          </tr>
+          <tr>
+            <td class="descritpion">Internet</td>
+            <td class="expense">- R$ 200,00</td>
+            <td class="date">23/01/2021</td>
+            <td>
+              <img src="./assets/minus.svg" alt="Remover transação">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <div id="form">
+        <h2>Nova transação</h2>
+
+        <form>
+          <div class="input-group">
+            <label for="description" class="sr-only">Descrição</label>
+            <input type="text" name="description" id="description" placeholder="Descrição" required>
+          </div>
+
+          <div class="input-group">
+            <label for="amount" class="sr-only">Valor</label>
+            <input type="number" name="amount" id="amount" step="0.01" placeholder="0,00" required>
+
+            <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
+          </div>
+
+          <div class="input-group">
+            <label for="date" class="sr-only">Data</label>
+            <input type="date" name="date" id="date" step="0.01"  required>
+          </div>
+
+          <div class="input-group actions">
+            <a href="#" class="button cancel">Calcelar</a>
+            <button>Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>dev.finance$</footer>
+</body>
+</html>
