@@ -44,28 +44,28 @@
     <section id="balance">
       <h2 class="sr-only">Balanço</h2>
 
-      <div class="card">
+      <div class="card" id="incomeCard">
         <h3>
           <span>Entradas</span>
           <img src="./assets/income.svg" alt="Imagem de entradas">
         </h3>
-        <p>R$ 5.000,00</p>
+        <p>R$ 0,00</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="expenseCard">
         <h3>
           <span>Saídas</span>
           <img src="./assets/expense.svg" alt="Imagem de saídas">
         </h3>
-        <p>R$ 2.000,00</p>
+        <p>R$ 0,00</p>
       </div>
 
-      <div class="card total">
+      <div class="card total" id="totalCard">
         <h3>
           <span>Total</span>
           <img src="./assets/total.svg" alt="Imagem de total">
         </h3>
-        <p>R$ 3.000,00</p>
+        <p>R$ 0,00</p>
       </div>
     </section>
 
@@ -84,32 +84,7 @@
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
-            <td class="descritpion">Luz</td>
-            <td class="expense">- R$ 500,00</td>
-            <td class="date">23/01/2021</td>
-            <td>
-              <img src="./assets/minus.svg" alt="Remover transação">
-            </td>
-          </tr>
-          <tr>
-            <td class="descritpion">Criação de Website</td>
-            <td class="income">R$ 5.000,00</td>
-            <td class="date">23/01/2021</td>
-            <td>
-              <img src="./assets/minus.svg" alt="Remover transação">
-            </td>
-          </tr>
-          <tr>
-            <td class="descritpion">Internet</td>
-            <td class="expense">- R$ 200,00</td>
-            <td class="date">23/01/2021</td>
-            <td>
-              <img src="./assets/minus.svg" alt="Remover transação">
-            </td>
-          </tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </section>
   </main>
@@ -139,7 +114,7 @@
 
           <div class="input-group actions">
             <a href="#" class="button cancel">Calcelar</a>
-            <button>Salvar</button>
+            <button type="button" id="save">Salvar</button>
           </div>
         </form>
       </div>

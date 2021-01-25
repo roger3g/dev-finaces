@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #F0F2F5;
+  background-color: #111;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -37,7 +37,7 @@ body {
 /* ===== TITLES =====*/
 
 h2 {
-  color: #363F5F;
+  color: #efefef;
   margin-top: 3.2rem;
   margin-bottom: 0.8rem;
   font-weight: normal;
@@ -97,7 +97,7 @@ button:hover {
 
 header {
   padding: 2rem 0 10rem;
-  background-color: #2D4A22;
+  background-color: #222;
   text-align: center;
 }
 
@@ -123,8 +123,8 @@ header #logo {
   padding: 1.5rem 2rem;
   margin-bottom: 2rem;
   border-radius: 0.25rem;
-  background-color: #FFFFFF;
-  color: #363F5F;
+  background-color: #191919;
+  color: #efefef;
 }
 
 .card h3 {
@@ -144,7 +144,7 @@ header #logo {
 
 .card.total {
   background-color: #49AA26;
-  color: #FFFFFF;
+  color: #191919;
 }
 
 /* ===== TABLE =====*/
@@ -158,7 +158,7 @@ header #logo {
 #data-table {
   width: 100%;
   border-spacing: 0 0.5rem;
-  color: #969CB3;
+  color: #7d8195;
 }
 
 table thead tr th:first-child, 
@@ -172,7 +172,7 @@ table tbody tr td:last-child {
 }
 
 table thead th {
-  background-color: #FFFFFF;
+  background-color: #191919;
   font-weight: normal;
   padding: 1rem 2rem;
   text-align: left;
@@ -187,20 +187,24 @@ table tbody tr:hover {
 }
 
 table tbody td {
-  background-color: #FFFFFF;
+  background-color: #191919;
   padding: 1rem 2rem;
 }
 
 td.descritpion {
-  color: #363F5F;
+  color: #efefef;
 }
 
 td.income {
-  color: #12A454;
+  color: #15bc61;
 }
 
 td.expense {
-  color: #E92929;
+  color: #f92c2c;
+}
+
+img {
+  cursor: pointer;
 }
 
 /* ===== MODAL =====*/
@@ -230,7 +234,7 @@ td.expense {
   width: 90%;
   max-width: 500px;
 
-  background-color: #F0F2F5;
+  background-color: #111;
   padding: 2.4rem;
   position: relative;
   z-index: 1;
@@ -251,6 +255,8 @@ td.expense {
   border: none;
   border-radius: 0.2rem;
   padding: 0.8rem;
+  color: #F0F0F5;
+  background-color: #191919;
 }
 
 .input-group {
@@ -259,6 +265,7 @@ td.expense {
 
 .input-group small {
   opacity: 0.4;
+  color: #efefef;
 }
 
 .input-group.actions {
