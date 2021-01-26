@@ -26,12 +26,9 @@ window.addEventListener('load', () => {
     const amount = Number(inputAmount.value)
     const date = String(inputDate.value)
 
-    if (amount < 0) {
-      createRow(description, formatCurrency(amount), 'expense', formatDate(date))
-    } else if (amount >= 0) {
-      createRow(description, formatCurrency(amount), 'income', formatDate(date))
-    }
-    
+    const className = amount < 0 ? "expense" : "income"
+    createRow(description, formatCurrency(amount), className, formatDate(date))
+
     modalOverlay.classList.remove('active')
   })
 
