@@ -26,7 +26,7 @@
 
 - **Front-End**
   - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-  - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+  - [SASS](https://sass-lang.com/)
   - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/Javascript)
   
 - **Back-End**
