@@ -1,0 +1,57 @@
+#transaction {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+
+  #data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: #7d8195;
+
+    thead tr th:first-child, 
+    tbody tr td:first-child {
+      border-radius: 0.25rem 0 0 0.25rem;
+    }
+
+    thead tr th:last-child, 
+    tbody tr td:last-child {
+      border-radius: 0 0.25rem 0.25rem 0;
+    }
+
+    thead th {
+      background-color: #191919;
+      font-weight: normal;
+      padding: 1rem 2rem;
+      text-align: left;
+    }
+
+    tbody tr {
+      opacity: 0.7;
+    }
+
+    tbody tr:hover {
+      opacity: 1;
+    }
+
+    tbody td {
+      background-color: #191919;
+      padding: 1rem 2rem;
+    }
+
+    td.descritpion {
+      color: #efefef;
+    }
+
+    td.income {
+      color: #15bc61;
+    }
+
+    td.expense {
+      color: #f92c2c;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+}

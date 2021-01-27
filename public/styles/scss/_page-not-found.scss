@@ -1,0 +1,10 @@
+#page-not-found {
+  width: 100%;
+  height: 100vh;
+
+  @include flex(flex, center, space-evenly, column);
+
+  img {
+    width: 300px;
+  }
+}

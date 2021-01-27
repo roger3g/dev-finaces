@@ -1,0 +1,25 @@
+.card {
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.25rem;
+  background-color: #191919;
+  color: #efefef;
+
+  h3 {
+    font-weight: normal;
+    font-size: 1rem;
+
+    @include flex(flex, center, space-between, row);
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+  }
+
+  &.total {
+    background-color: #49AA26;
+    color: #191919;
+  }
+}

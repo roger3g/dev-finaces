@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev:server": "nodemon src/server.js"
+    "dev:server": "nodemon src/server.js",
+    "dev:sass": "sass --watch public/styles/scss/index.scss --watch public/styles/css/index.css"
   },
   "repository": {
     "type": "git",

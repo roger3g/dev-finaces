@@ -1,0 +1,39 @@
+@mixin flex($display, $align-items, $justify-content, $flex-direction) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 93.75%; /*15px*/
+}
+
+body {
+  background-color: #111;
+  font-family: 'Poppins', sans-serif;
+
+  .container {
+    width: min(90vw, 800px);
+    margin: auto;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 1px solid red;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}

@@ -1,0 +1,34 @@
+#form {
+  max-width: 500px;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  form input {
+    width: 100%;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    color: #F0F0F5;
+    background-color: #191919;
+  }
+
+  .input-group {
+    margin-top: 0.8rem;
+
+    small {
+      opacity: 0.4;
+      color: #efefef;
+    }
+
+    &.actions {
+      @include flex(flex, center, space-between, row);
+    }
+
+    &.actions .button,
+    &.actions button {
+      width: 48%;
+    }
+  }
+}
