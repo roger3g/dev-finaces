@@ -3,6 +3,7 @@
 
   h2 {
     margin-top: 0;
+    color: #6A6180;
   }
 
   form input {
@@ -10,8 +11,8 @@
     border: none;
     border-radius: 0.2rem;
     padding: 0.8rem;
-    color: #F0F0F5;
-    background-color: #191919;
+    color: #6A6180;
+    background-color: #FFF;
   }
 
   .input-group {
@@ -19,7 +20,6 @@
 
     small {
       opacity: 0.4;
-      color: #efefef;
     }
 
     &.actions {

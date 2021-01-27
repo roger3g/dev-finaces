@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #111;
+  background-color: #F0F0F7;
   font-family: "Poppins", sans-serif;
 }
 body .container {
@@ -42,7 +42,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #3DD705;
+  color: #04D361;
 }
 
 button {
@@ -82,7 +82,7 @@ button:hover {
 
 header {
   padding: 2rem 0 10rem;
-  background-color: #222;
+  background-color: #8257E5;
   text-align: center;
 }
 header #logo {
@@ -102,8 +102,8 @@ header #logo {
   padding: 1.5rem 2rem;
   margin-bottom: 2rem;
   border-radius: 0.25rem;
-  background-color: #191919;
-  color: #efefef;
+  background-color: #FFF;
+  color: #191919;
 }
 .card h3 {
   font-weight: normal;
@@ -119,8 +119,8 @@ header #logo {
   margin-top: 1rem;
 }
 .card.total {
-  background-color: #49AA26;
-  color: #191919;
+  background-color: #04D361;
+  color: #efefef;
 }
 
 #transaction {
@@ -142,7 +142,7 @@ header #logo {
   border-radius: 0 0.25rem 0.25rem 0;
 }
 #transaction #data-table thead th {
-  background-color: #191919;
+  background-color: #FFF;
   font-weight: normal;
   padding: 1rem 2rem;
   text-align: left;
@@ -154,17 +154,17 @@ header #logo {
   opacity: 1;
 }
 #transaction #data-table tbody td {
-  background-color: #191919;
+  background-color: #FFF;
   padding: 1rem 2rem;
 }
 #transaction #data-table td.descritpion {
-  color: #efefef;
+  color: #363f5f;
 }
 #transaction #data-table td.income {
-  color: #15bc61;
+  color: #12a454;
 }
 #transaction #data-table td.expense {
-  color: #f92c2c;
+  color: #e92929;
 }
 #transaction #data-table img {
   cursor: pointer;
@@ -191,7 +191,7 @@ header #logo {
 .modal-overlay .modal {
   width: 90%;
   max-width: 500px;
-  background-color: #111;
+  background-color: #F0F0F7;
   padding: 2.4rem;
   position: relative;
   z-index: 1;
@@ -202,21 +202,21 @@ header #logo {
 }
 #form h2 {
   margin-top: 0;
+  color: #6A6180;
 }
 #form form input {
   width: 100%;
   border: none;
   border-radius: 0.2rem;
   padding: 0.8rem;
-  color: #F0F0F5;
-  background-color: #191919;
+  color: #6A6180;
+  background-color: #FFF;
 }
 #form .input-group {
   margin-top: 0.8rem;
 }
 #form .input-group small {
   opacity: 0.4;
-  color: #efefef;
 }
 #form .input-group.actions {
   display: flex;
