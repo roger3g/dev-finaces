@@ -5,6 +5,18 @@
   flex-direction: $flex-direction;
 }
 
+$color-primary: #8257E5;
+$color-secondary: #04D361;
+$color-secondary-dark: #02b553;
+$color-background: #F0F0F7;
+$white: #FFFFFF;
+$green: #12A454;
+$red: #E92929;
+$color-title: #32264D;
+$color-text-white: #efefef;
+$color-text-dark: #363F5F;
+$color-text-table: #7d8195;
+
 * {
   padding: 0;
   margin: 0;
@@ -13,10 +25,19 @@
 
 html {
   font-size: 93.75%; /*15px*/
+
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-secondary;
+    border-radius: 0.2rem;
+  }
 }
 
 body {
-  background-color: #F0F0F7;
+  background-color: $color-background;
   font-family: 'Poppins', sans-serif;
 
   .container {

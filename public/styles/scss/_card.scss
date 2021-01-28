@@ -2,8 +2,8 @@
   padding: 1.5rem 2rem;
   margin-bottom: 2rem;
   border-radius: 0.25rem;
-  background-color: #FFF;
-  color: #191919;
+  background-color: $white;
+  color: $color-title;
 
   h3 {
     font-weight: normal;
@@ -19,7 +19,7 @@
   }
 
   &.total {
-    background-color: #04D361;
-    color: #efefef;
+    background-color: $color-secondary;
+    color: $color-text-white;
   }
 }

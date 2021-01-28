@@ -3,7 +3,7 @@
 
   h2 {
     margin-top: 0;
-    color: #6A6180;
+    color: $color-title;
   }
 
   form input {
@@ -11,8 +11,8 @@
     border: none;
     border-radius: 0.2rem;
     padding: 0.8rem;
-    color: #6A6180;
-    background-color: #FFF;
+    color: $color-title;
+    background-color: $white;
   }
 
   .input-group {

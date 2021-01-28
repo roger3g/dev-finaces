@@ -8,6 +8,13 @@ html {
   font-size: 93.75%;
   /*15px*/
 }
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #04D361;
+  border-radius: 0.2rem;
+}
 
 body {
   background-color: #F0F0F7;
@@ -31,32 +38,36 @@ body .sr-only {
 }
 
 h2 {
-  color: #efefef;
+  color: #32264D;
   margin-top: 3.2rem;
   margin-bottom: 0.8rem;
   font-weight: normal;
 }
 
 a {
-  color: #49AA26;
+  color: #04D361;
   text-decoration: none;
 }
 a:hover {
-  color: #04D361;
+  color: #02b553;
 }
 
 button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+#save {
   width: 100%;
   height: 50px;
-  border: none;
-  color: #FFF;
+  color: #FFFFFF;
   background-color: #04D361;
   padding: 0;
   border-radius: 0.25rem;
-  cursor: pointer;
   transition: background-color 200ms;
 }
-button:hover {
+#save:hover {
   background-color: #02b553;
 }
 
@@ -80,14 +91,29 @@ button:hover {
   opacity: 1;
 }
 
+#change-theme {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#change-theme img {
+  width: 2rem;
+  height: 2rem;
+}
+
 header {
   padding: 2rem 0 10rem;
   background-color: #8257E5;
   text-align: center;
-}
-header #logo {
-  color: #FFFFFF;
-  font-weight: 100;
 }
 
 #balance {
@@ -102,8 +128,8 @@ header #logo {
   padding: 1.5rem 2rem;
   margin-bottom: 2rem;
   border-radius: 0.25rem;
-  background-color: #FFF;
-  color: #191919;
+  background-color: #FFFFFF;
+  color: #32264D;
 }
 .card h3 {
   font-weight: normal;
@@ -142,7 +168,7 @@ header #logo {
   border-radius: 0 0.25rem 0.25rem 0;
 }
 #transaction #data-table thead th {
-  background-color: #FFF;
+  background-color: #FFFFFF;
   font-weight: normal;
   padding: 1rem 2rem;
   text-align: left;
@@ -154,17 +180,17 @@ header #logo {
   opacity: 1;
 }
 #transaction #data-table tbody td {
-  background-color: #FFF;
+  background-color: #FFFFFF;
   padding: 1rem 2rem;
 }
 #transaction #data-table td.descritpion {
-  color: #363f5f;
+  color: #363F5F;
 }
 #transaction #data-table td.income {
-  color: #12a454;
+  color: #12A454;
 }
 #transaction #data-table td.expense {
-  color: #e92929;
+  color: #E92929;
 }
 #transaction #data-table img {
   cursor: pointer;
@@ -202,15 +228,15 @@ header #logo {
 }
 #form h2 {
   margin-top: 0;
-  color: #6A6180;
+  color: #32264D;
 }
 #form form input {
   width: 100%;
   border: none;
   border-radius: 0.2rem;
   padding: 0.8rem;
-  color: #6A6180;
-  background-color: #FFF;
+  color: #32264D;
+  background-color: #FFFFFF;
 }
 #form .input-group {
   margin-top: 0.8rem;
@@ -257,6 +283,11 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
+  }
+
+  #change-theme {
+    top: 1rem;
+    right: 1rem;
   }
 }
 

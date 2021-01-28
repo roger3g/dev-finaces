@@ -6,7 +6,7 @@
   #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
-    color: #7d8195;
+    color: $color-text-table;
 
     thead tr th:first-child, 
     tbody tr td:first-child {
@@ -19,7 +19,7 @@
     }
 
     thead th {
-      background-color: #FFF;
+      background-color: $white;
       font-weight: normal;
       padding: 1rem 2rem;
       text-align: left;
@@ -34,20 +34,20 @@
     }
 
     tbody td {
-      background-color: #FFF;
+      background-color: $white;
       padding: 1rem 2rem;
     }
 
     td.descritpion {
-      color: #363f5f;
+      color: $color-text-dark;
     }
 
     td.income {
-      color: #12a454;
+      color: $green;
     }
 
     td.expense {
-      color: #e92929;
+      color: $red;
     }
 
     img {

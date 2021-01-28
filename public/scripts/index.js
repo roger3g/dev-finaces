@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
   const incomeCard = document.querySelector('#incomeCard p')
   const expenseCard = document.querySelector('#expenseCard p')
   const totalCard = document.querySelector('#totalCard p')
-
+  
   newTransaction.addEventListener('click', () => {
     modalOverlay.classList.add('active')
   })

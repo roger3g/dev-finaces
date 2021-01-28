@@ -36,6 +36,10 @@
 </head>
 <body>
 
+  <button id="change-theme">
+    <img src="/assets/moon.svg" alt="Mudar tema">
+  </button>
+
   <header>
     <img src="./assets/logo.svg" alt="Logo Dev Finance">
   </header>
@@ -47,7 +51,7 @@
       <div class="card" id="incomeCard">
         <h3>
           <span>Entradas</span>
-          <img src="./assets/income.svg" alt="Imagem de entradas">
+          <img src="/assets/income.svg" alt="Imagem de entradas">
         </h3>
         <p>R$ 0,00</p>
       </div>
@@ -55,7 +59,7 @@
       <div class="card" id="expenseCard">
         <h3>
           <span>Saídas</span>
-          <img src="./assets/expense.svg" alt="Imagem de saídas">
+          <img src="/assets/expense.svg" alt="Imagem de saídas">
         </h3>
         <p>R$ 0,00</p>
       </div>
@@ -63,7 +67,7 @@
       <div class="card total" id="totalCard">
         <h3>
           <span>Total</span>
-          <img src="./assets/total.svg" alt="Imagem de total">
+          <img src="/assets/total.svg" alt="Imagem de total">
         </h3>
         <p>R$ 0,00</p>
       </div>
@@ -93,7 +97,7 @@
           </tr>
           <tr>
             <td class="descritpion">Internet</td>
-            <td class="expense">- R$300,00</td>
+            <td class="expense">- R$ 300,00</td>
             <td class="date">11/01/2021</td>
             <td><img src="../assets/minus.svg"></td>
           </tr>
@@ -110,19 +114,19 @@
         <form>
           <div class="input-group">
             <label for="description" class="sr-only">Descrição</label>
-            <input type="text" name="description" id="description" placeholder="Descrição" required>
+            <input type="text" name="description" id="description" placeholder="Descrição">
           </div>
 
           <div class="input-group">
             <label for="amount" class="sr-only">Valor</label>
-            <input type="number" name="amount" id="amount" step="0.01" placeholder="0,00" required>
+            <input type="number" name="amount" id="amount" step="0.01" placeholder="0,00">
 
             <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
           </div>
 
           <div class="input-group">
             <label for="date" class="sr-only">Data</label>
-            <input type="date" name="date" id="date" step="0.01"  required>
+            <input type="date" name="date" id="date" step="0.01">
           </div>
 
           <div class="input-group actions">
