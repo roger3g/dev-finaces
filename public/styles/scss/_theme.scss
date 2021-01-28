@@ -1,0 +1,68 @@
+// Dark
+$color-primary: #121214;
+$color-background: #202024;
+$black: #1c1c1c;
+$color-title: #f0f0f5;
+$color-text-dark: #f0f0f5;
+
+.theme-dark {
+  background-color: $color-background;
+
+  header {
+    background-color: $color-primary;
+  }
+
+  .card {
+    background-color: $black;
+    color: $color-title;
+
+    &.total {
+      background-color: $color-secondary;
+      color: $color-text-white;
+    }
+  }
+
+  #transaction {
+
+    #data-table {
+      thead th {
+        background-color: $black;
+      }
+
+      tbody td {
+        background-color: $black;
+      }
+
+      td.descritpion {
+        color: $color-text-dark;
+      }
+    }
+  }
+
+  #form {
+    h2 {
+      color: $color-title;
+    }
+
+    form input {
+      color: $color-title;
+      background-color: $black;
+    }
+
+    .input-group {
+      small {
+        color: $color-text-dark;
+      }
+    }
+  }
+
+  footer {
+    color: $color-text-dark;
+  }
+
+  .modal-overlay {
+    .modal {
+      background-color: $color-background;
+    }
+  }
+}

@@ -95,7 +95,8 @@ button {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: #7D8195;
+  opacity: 0.7;
   position: fixed;
   bottom: 1rem;
   right: 1rem;
@@ -157,7 +158,7 @@ header {
 #transaction #data-table {
   width: 100%;
   border-spacing: 0 0.5rem;
-  color: #7d8195;
+  color: #7D8195;
 }
 #transaction #data-table thead tr th:first-child,
 #transaction #data-table tbody tr td:first-child {
@@ -271,6 +272,46 @@ footer {
 }
 #page-not-found img {
   width: 300px;
+}
+
+.theme-dark {
+  background-color: #202024;
+}
+.theme-dark header {
+  background-color: #121214;
+}
+.theme-dark .card {
+  background-color: #1c1c1c;
+  color: #f0f0f5;
+}
+.theme-dark .card.total {
+  background-color: #04D361;
+  color: #efefef;
+}
+.theme-dark #transaction #data-table thead th {
+  background-color: #1c1c1c;
+}
+.theme-dark #transaction #data-table tbody td {
+  background-color: #1c1c1c;
+}
+.theme-dark #transaction #data-table td.descritpion {
+  color: #f0f0f5;
+}
+.theme-dark #form h2 {
+  color: #f0f0f5;
+}
+.theme-dark #form form input {
+  color: #f0f0f5;
+  background-color: #1c1c1c;
+}
+.theme-dark #form .input-group small {
+  color: #f0f0f5;
+}
+.theme-dark footer {
+  color: #f0f0f5;
+}
+.theme-dark .modal-overlay .modal {
+  background-color: #202024;
 }
 
 @media (min-width: 800px) {
