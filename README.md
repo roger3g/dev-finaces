@@ -7,7 +7,11 @@
 </p>
 
 <div align="center">
-  <img src=".github/desk.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
+  <img src=".github/desk-light.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
+</div>
+
+<div align="center">
+  <img src=".github/desk-dark.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
 </div>
 
 ## 📌 Table of Contents
@@ -34,7 +38,7 @@
   
 ## 💻 Project
 
-Finance control platform.
+System to help people control their finances.
 
 ## 🔖 Layout
 
@@ -42,12 +46,12 @@ You can view the layout of this project by clicking [here](https://devfinances.h
 
 ## ⬆ Updates
 
-This project is constantly evolving, I am always testing new features on it.
+This project is being the basis for my learning, so I make constant changes to it.
 
 ## 💡 Implementation ideas
 
-- [ ] Improve responsiveness;
 - [ ] Refactor.
+- [ ] Improve responsiveness;
 
 ## 📂 Directory structure
 
@@ -58,6 +62,8 @@ This project is constantly evolving, I am always testing new features on it.
   |-- pages/
   |-- scripts/
   |-- styles/
+    |-- css/
+    |-- scss/
   |-- index.html
 |-- src/
   |-- server.js
@@ -80,6 +86,9 @@ $ cd dev-finances
 
 # Install the dependencies
 $ npm install
+
+# Run the sass
+$ npm run dev:sass
 
 # Run the application in development mode
 $ npm run dev:server
