@@ -31,8 +31,6 @@
   <link rel="stylesheet" href="/styles/css/index.css">
   <link rel="icon" type="image/svg" sizes="58" href="assets/favicon.svg">
 
-  <script src="/scripts/index.js" type="text/javascript" charset="utf-8"></script>
-
 </head>
 <body>
   <button id="change-theme">
@@ -52,7 +50,7 @@
           <span>Entradas</span>
           <img src="/assets/income.svg" alt="Imagem de entradas">
         </h3>
-        <p>R$ 5000,00</p>
+        <p  id="income-display">R$ 0,00</p>
       </div>
 
       <div class="card" id="expenseCard">
@@ -60,7 +58,7 @@
           <span>Saídas</span>
           <img src="/assets/expense.svg" alt="Imagem de saídas">
         </h3>
-        <p>R$ 300,00</p>
+        <p id="expense-display">R$ 0,00</p>
       </div>
 
       <div class="card total" id="totalCard">
@@ -68,7 +66,7 @@
           <span>Total</span>
           <img src="/assets/total.svg" alt="Imagem de total">
         </h3>
-        <p>R$ 4700,00</p>
+        <p  id="total-display">R$ 0,00</p>
       </div>
     </section>
 
@@ -87,20 +85,7 @@
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
-            <td class="descritpion">Criação de Web Site</td>
-            <td class="income">R$ 5.000,00</td>
-            <td class="date">11/01/2021</td>
-            <td><img src="/../assets/minus.svg"></td>
-          </tr>
-          <tr>
-            <td class="descritpion">Internet</td>
-            <td class="expense">- R$ 300,00</td>
-            <td class="date">11/01/2021</td>
-            <td><img src="/../assets/minus.svg"></td>
-          </tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </section>
   </main>
@@ -130,7 +115,7 @@
 
           <div class="input-group actions">
             <a href="#" class="button cancel">Calcelar</a>
-            <button type="button" id="save">Salvar</button>
+            <button id="save">Salvar</button>
           </div>
         </form>
       </div>
@@ -140,5 +125,6 @@
   <footer>dev.finance$</footer>
 
   <script src="/scripts/theme.js" type="text/javascript"></script>
+  <script src="/scripts/index.js" type="text/javascript"></script>
 </body>
 </html>
