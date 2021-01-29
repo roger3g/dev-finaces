@@ -20,6 +20,10 @@ $color-text-dark: #f0f0f5;
       background-color: $color-secondary;
       color: $color-text-white;
     }
+
+    &.total-expense {
+      background-color: $red;
+    }
   }
 
   #transaction {

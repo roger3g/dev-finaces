@@ -149,6 +149,9 @@ header {
   background-color: #04D361;
   color: #efefef;
 }
+.card.total-expense {
+  background-color: #E92929;
+}
 
 #transaction {
   width: 100%;
@@ -287,6 +290,9 @@ footer {
 .theme-dark .card.total {
   background-color: #04D361;
   color: #efefef;
+}
+.theme-dark .card.total-expense {
+  background-color: #E92929;
 }
 .theme-dark #transaction #data-table thead th {
   background-color: #1c1c1c;

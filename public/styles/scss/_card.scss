@@ -22,4 +22,8 @@
     background-color: $color-secondary;
     color: $color-text-white;
   }
+
+  &.total-expense {
+    background-color: $red;
+  }
 }

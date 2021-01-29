@@ -7,6 +7,7 @@ const transactionsContainer = selectElement('#data-table tbody')
 const incomeDisplay = selectElement('#income-display')
 const expenseDisplay = selectElement('#expense-display')
 const totalDisplay = selectElement('#total-display')
+const totalCard = selectElement('#totalCard')
 
 const description = selectElement('input#description')
 const amount = selectElement('input#amount')
@@ -71,7 +72,15 @@ function expenses() {
 }
 
 function total() {
-  return incomes() + expenses()
+  const value = incomes() + expenses()
+
+  if (value < 0) {
+    totalCard.classList.add('total-expense')
+  } else {
+    totalCard.classList.remove('total-expense')
+  }
+
+  return value
 }
 
 const Transaction = {
