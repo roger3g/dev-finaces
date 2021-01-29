@@ -1,11 +1,16 @@
-const selectElement = element => {
-  return document.querySelector(element)
-}
-
 const newTransaction = selectElement('#new-transaction')
 const buttonCancel = selectElement('.cancel')
 const modalOverlay = selectElement('.modal-overlay')
 const form = selectElement('form')
+const transactionsContainer = selectElement('#data-table tbody')
+
+const incomeDisplay = selectElement('#income-display')
+const expenseDisplay = selectElement('#expense-display')
+const totalDisplay = selectElement('#total-display')
+
+const description = selectElement('input#description')
+const amount = selectElement('input#amount')
+const date = selectElement('input#date')
 
 newTransaction.addEventListener('click', () => {
   modalOverlay.classList.add('active')
@@ -15,185 +20,172 @@ buttonCancel.addEventListener('click', () => {
   modalOverlay.classList.remove('active')
 })
 
-const Storage = {
-  get() {
-    return JSON.parse(localStorage.getItem('dev.finances:transactions')) || []
-  },
+form.addEventListener('submit', () => {
+  submit(event)
+})
 
-  set(transactions) {
-    localStorage.setItem('dev.finances:transactions', JSON.stringify(transactions))
-  }
+function selectElement(element) {
+  return document.querySelector(element)
+}
+
+function storageGet () {
+  return JSON.parse(localStorage.getItem('dev.finances:transactions')) || []
+}
+
+function storageSet (transactions) {
+  return localStorage.setItem('dev.finances:transactions', JSON.stringify(transactions))
+}
+
+function add(transaction) {
+  Transaction.all.push(transaction)
+  reload()
+}
+
+function remove(index) {
+  Transaction.all.splice(index, 1)
+  reload()
+}
+
+function incomes() {
+  let income = 0
+
+  Transaction.all.forEach(transaction => {
+    if (transaction.amount > 0) {
+      income += transaction.amount
+    }
+  })
+
+  return income
+}
+
+function expenses() {
+  let expense = 0
+
+  Transaction.all.forEach(transaction => {
+    if (transaction.amount < 0) {
+      expense += transaction.amount
+    }
+  })
+
+  return expense
+}
+
+function total() {
+  return incomes() + expenses()
 }
 
 const Transaction = {
-  all: Storage.get(),
-  add(transaction) {
-    Transaction.all.push(transaction)
-    App.reload()
-  },
+  all: storageGet()
+}
 
-  remove(index) {
-    Transaction.all.splice(index, 1)
-    App.reload()
-  },
+function addTransactions(transaction, index) {
+  const tr = document.createElement('tr')
+  tr.innerHTML = innerHTMLTransactions(transaction, index)
+  tr.dataset.index = index
+  transactionsContainer.appendChild(tr)
+}
 
-  incomes() {
-    let income = 0
+function innerHTMLTransactions(transaction, index) {
+  const CssClass = transaction.amount > 0 ? 'income' : 'expense'
+  const amount = formatCurrency(transaction.amount)
 
-    Transaction.all.forEach(transaction => {
-      if (transaction.amount > 0) {
-        income += transaction.amount
-      }
-    })
+  const html = `
+  <td class="descritpion">${transaction.description}</td>
+  <td class="${CssClass}">${amount}</td>
+  <td class="date">${transaction.date}</td>
+  <td><img onclick="remove(${index})" src="/../assets/minus.svg"></td>
+  `
 
-    return income
-  },
-  
-  expenses() {
-    let expense = 0
+  return html
+}
 
-    Transaction.all.forEach(transaction => {
-      if (transaction.amount < 0) {
-        expense += transaction.amount
-      }
-    })
+function updateBalance() {
+  incomeDisplay.innerHTML = formatCurrency(incomes())
+  expenseDisplay.innerHTML = formatCurrency(expenses())
+  totalDisplay.innerHTML = formatCurrency(total())
+}
 
-    return expense
-  },
-  
-  total() {
-    return Transaction.incomes() + Transaction.expenses()
+function clearTransactions() {
+  transactionsContainer.innerHTML = ''
+}
+
+function formatAmount(value) {
+  value = Number(value) * 100
+  return Math.round(value)
+}
+
+function formatCurrency(value) {
+  const signal = Number(value) < 0 ? '-' : ''
+  value = String(value).replace(/\D/g, '')
+  value = Number(value) / 100
+  value = value.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+  return signal + value
+}
+
+function formatDate(date) {
+  const splittedDate = date.split('-')
+  return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
+}
+
+function getValues() {
+  return {
+    description: description.value,
+    amount: amount.value,
+    date: date.value
   }
 }
 
-const DOM = {
-  transactionsContainer: selectElement('#data-table tbody'),
+function validateFields() {
+  const { description, amount, date } = getValues()
 
-  addTransactions(transaction, index) {
-    const tr = document.createElement('tr')
-    tr.innerHTML = DOM.innerHTMLTransactions(transaction, index)
-    tr.dataset.index = index
 
-    DOM.transactionsContainer.appendChild(tr)
-  },
-
-  innerHTMLTransactions(transaction, index) {
-    const CssClass = transaction.amount > 0 ? 'income' : 'expense'
-
-    const amount = Utils.formatCurrency(transaction.amount)
-
-    const html = `
-    <td class="descritpion">${transaction.description}</td>
-    <td class="${CssClass}">${amount}</td>
-    <td class="date">${transaction.date}</td>
-    <td><img onclick="Transaction.remove(${index})" src="/../assets/minus.svg"></td>
-    `
-
-    return html
-  },
-
-  updateBalance() {
-    selectElement('#income-display').innerHTML = Utils.formatCurrency(Transaction.incomes())
-    selectElement('#expense-display').innerHTML = Utils.formatCurrency(Transaction.expenses())
-    selectElement('#total-display').innerHTML = Utils.formatCurrency(Transaction.total())
-  },
-
-  clearTransactions() {
-    DOM.transactionsContainer.innerHTML = ''
+  if (description.trim() === '' || amount.trim() === '' || date.trim() === '') {
+    throw new Error('Por favor preencha todos os campos')
   }
 }
 
-const Utils = {
-  formatAmount(value) {
-    value = Number(value) * 100
-    return value
-  },
+function formatValues() {
+  let { description, amount, date } = getValues()
 
-  formatCurrency(value) {
-    const signal = Number(value) < 0 ? '-' : ''
-    value = String(value).replace(/\D/g, '')
-    value = Number(value) / 100
-    value = value.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
-    return signal + value
-  },
+  amount = formatAmount(amount)
+  date = formatDate(date)
 
-  formatDate(date) {
-    const splittedDate = date.split('-')
-    return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
-  },
-}
-
-const Form = {
-  description: selectElement('input#description'),
-  amount: selectElement('input#amount'),
-  date: selectElement('input#date'),
-
-  getValues() {
-    return {
-      description: Form.description.value,
-      amount: Form.amount.value,
-      date: Form.date.value
-    }
-  },  
-
-  validateFields() {
-    const { description, amount, date } = Form.getValues()
-    
-
-    if (description.trim() === '' || amount.trim() === '' || date.trim() === '') {
-      throw new Error('Por favor preencha todos os campos')
-    }
-  },
-
-  formatValues() {
-    let { description, amount, date } = Form.getValues()
-
-    amount = Utils.formatAmount(amount)
-    date = Utils.formatDate(date)
-
-    return {
-      description,
-      amount,
-      date
-    }
-  },
-
-  clearFields() {
-    Form.description.value = ''
-    Form.amount.value = ''
-    Form.date.value = ''
-  },
-
-  submit(event) {
-    event.preventDefault()
-    try {
-      Form.validateFields()
-      const transaction = Form.formatValues()
-      Transaction.add(transaction)
-      Form.clearFields()
-      modalOverlay.classList.remove('active')
-    } catch (error) {
-      alert(error.message)
-    }
+  return {
+    description,
+    amount,
+    date
   }
 }
 
-form.addEventListener('submit', () => {
-  Form.submit(event)
-})
+function clearFields() {
+  description.value = ''
+  amount.value = ''
+  date.value = ''
+}
 
-const App = {
-  start() {
-    Transaction.all.forEach(DOM.addTransactions)
-
-    DOM.updateBalance()
-    Storage.set(Transaction.all)
-  },
-  
-  reload() {
-    DOM.clearTransactions()
-    App.start()
+function submit(event) {
+  event.preventDefault()
+  try {
+    validateFields()
+    const transaction = formatValues()
+    add(transaction)
+    clearFields()
+    modalOverlay.classList.remove('active')
+  } catch (error) {
+    alert(error.message)
   }
 }
 
-App.start()
+function start() {
+  Transaction.all.forEach(addTransactions)
+
+  updateBalance()
+  storageSet(Transaction.all)
+}
+
+function reload() {
+  clearTransactions()
+  start()
+}
+
+start()
