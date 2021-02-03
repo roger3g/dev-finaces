@@ -33,9 +33,13 @@
 
 </head>
 <body>
-  <button id="change-theme">
-    <img src="/assets/theme.svg" alt="Mudar tema">
-  </button>
+
+  <div id="change-theme">
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">
+      <div id="ball"></div>
+    </label>
+  </div>
 
   <header>
     <img src="/assets/logo.svg" alt="Logo Dev Finance">
@@ -91,6 +95,7 @@
   </main>
 
   <div class="modal-overlay">
+
     <div class="modal">
       <div id="form">
         <h2>Nova transação</h2>
@@ -98,12 +103,12 @@
         <form>
           <div class="input-group">
             <label for="description" class="sr-only">Descrição</label>
-            <input type="text" name="description" id="description" placeholder="Descrição">
+            <input type="text" name="description" autocomplete="off" id="description" placeholder="Descrição">
           </div>
 
           <div class="input-group">
             <label for="amount" class="sr-only">Valor</label>
-            <input type="number" name="amount" id="amount" step="0.01" placeholder="0,00">
+            <input type="number" name="amount" id="amount" step="0.01" autocomplete="off" placeholder="0,00">
 
             <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
           </div>

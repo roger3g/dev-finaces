@@ -51,22 +51,41 @@ button {
 }
 
 #change-theme {
-  width: 3rem;
-  height: 3rem;
-  
-  border-radius: 50%;
-  background-color: $color-text-table;
-  opacity: 0.7;
-  
-  position: fixed;
-  bottom: 1rem;
+  position: absolute;
+  top: 1rem;
   right: 1rem;
-  z-index: 999;
 
-  @include flex(flex, center, center, row);
+  label {
+    width: 50px;
+    height: 26px;
+    
+    background-color: $color-background;
+    border-radius: 50px;
+    position: relative;
+    
+    @include flex(flex, center, space-between, row);
+  }
 
-  img {
-    width: 2rem;
-    height: 2rem;
+  #ball {
+    width: 22px;
+    height: 22px;
+    
+    background-color: $color-title;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    transition: transform 0.2s linear;
+  }
+
+  #checkbox {
+    opacity: 0;
+    position: absolute;
+
+    &:checked + label #ball {
+      transform: translateX(24px);
+    }
   }
 }

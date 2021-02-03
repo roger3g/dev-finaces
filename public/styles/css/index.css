@@ -9,7 +9,7 @@ html {
   /*15px*/
 }
 html::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0.5rem;
 }
 html::-webkit-scrollbar-thumb {
   background-color: #04D361;
@@ -92,29 +92,46 @@ button {
 }
 
 #change-theme {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: #7D8195;
-  opacity: 0.7;
-  position: fixed;
-  bottom: 1rem;
+  position: absolute;
+  top: 1rem;
   right: 1rem;
-  z-index: 999;
+}
+#change-theme label {
+  width: 50px;
+  height: 26px;
+  background-color: #F0F0F7;
+  border-radius: 50px;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
 }
-#change-theme img {
-  width: 2rem;
-  height: 2rem;
+#change-theme #ball {
+  width: 22px;
+  height: 22px;
+  background-color: #32264D;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s linear;
+}
+#change-theme #checkbox {
+  opacity: 0;
+  position: absolute;
+}
+#change-theme #checkbox:checked + label #ball {
+  transform: translateX(24px);
 }
 
 header {
   padding: 2rem 0 10rem;
   background-color: #8257E5;
   text-align: center;
+}
+header button {
+  margin-left: 3rem;
 }
 
 #balance {

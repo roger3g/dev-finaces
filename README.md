@@ -50,6 +50,10 @@ This project is being the basis for my learning, so I make constant changes to i
 
 ## 💡 Implementation ideas
 
+- [X] Add dark-mode and light-mode
+- [X] Save the theme to storage
+- [X] Change the color of the card-total depending on the color
+- [] Add custom error message
 - [ ] Refactor.
 - [ ] Improve responsiveness;
 
