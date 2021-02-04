@@ -270,6 +270,7 @@ header button {
   padding: 0.8rem;
   color: #32264D;
   background-color: #FFFFFF;
+  outline-color: #8257E5;
 }
 #form .input-group {
   margin-top: 0.8rem;
