@@ -27,12 +27,12 @@ html {
   font-size: 93.75%; /*15px*/
 
   &::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.3rem;
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: $color-secondary;
-    border-radius: 0.2rem;
+    border-radius: 0.1rem;
   }
 }
 
