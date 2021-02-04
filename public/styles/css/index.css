@@ -72,8 +72,19 @@ button {
 }
 
 .button.new {
-  display: inline-block;
-  margin-bottom: 0.8rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #32264D;
+  color: #F0F0F7;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 .button.cancel {
   height: 50px;
@@ -174,6 +185,7 @@ header button {
   width: 100%;
   display: block;
   overflow-x: auto;
+  margin-top: 2rem;
 }
 #transaction #data-table {
   width: 100%;

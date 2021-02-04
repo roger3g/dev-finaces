@@ -29,8 +29,20 @@ button {
 
 .button {
   &.new {
-    display: inline-block;
-    margin-bottom: 0.8rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    background-color: $color-title;
+    color: $color-background;
+
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+
+    font-size: 2rem;
+
+    @include flex(flex, center, center, row);
   }
 
   &.cancel {
