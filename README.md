@@ -7,11 +7,7 @@
 </p>
 
 <div align="center">
-  <img src=".github/desk-light.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
-</div>
-
-<div align="center">
-  <img src=".github/desk-dark.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
+  <img src=".github/desk.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
 </div>
 
 ## 📌 Table of Contents
@@ -91,7 +87,7 @@ $ cd dev-finances
 # Install the dependencies
 $ npm install
 
-# Run the sass
+# Run the sass (It is important that you have sass installed)
 $ npm run dev:sass
 
 # Run the application in development mode
