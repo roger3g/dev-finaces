@@ -105,7 +105,7 @@ $ npm run dev:server
 
 After the merge of your pull request is done, you can delete your branch.
 
-You can report a bug [here](https://github.com/roger3g/dev-finances/issues)
+You can report a bug [here](https://github.com/roger3g/dev-finances/issues).
 
 ## 📝 License
 
