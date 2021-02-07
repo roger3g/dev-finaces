@@ -10,19 +10,6 @@
   <img src=".github/deskt.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
 </div>
 
-## 📌 Table of Contents
-
-- [Technology](#-technology)
-- [Project](#-project)
-- [Layout](#-layout)
-- [Environment Support](#-environment-support)
-- [Updates](#-updates)
-- [Implementation ideas](#-implementation-ideas)
-- [Directory structure](#-directory-structure)
-- [Installation](#-installation)
-- [How to contribute](#-how-to-contribute)
-- [License](#-license)
-
 ## 🛠 Technology
 
 - **Front-End**
