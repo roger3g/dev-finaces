@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=author&message=roger3g&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=languages&message=3&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=platform&message=web&color=F0F0F7&labelColor=8257E5" style="display: inline;">
+  <img src="https://img.shields.io/static/v1?label=author&message=roger3g&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=languages&message=3&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=platform&message=web&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/stars/roger3g/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/issues/roger3g/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/forks/roger3g/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;">
 </p>
 
 <div align="center">
