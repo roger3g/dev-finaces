@@ -22,11 +22,11 @@
   
 ## 💻 Project
 
-System to help people control their finances.
+Dev finance is a web system designed to help you control your finances.
 
 ## 🔖 Layout
 
-You can view the layout of this project by clicking [here](https://devfinances.herokuapp.com/)
+You can view the layout of this project by clicking [here](https://devfinances.herokuapp.com/).
 
 ## 🖥 Environment Support
 
@@ -40,12 +40,12 @@ This project is being the basis for my learning, so I make constant changes to i
 
 ## 💡 Implementation ideas
 
-- [X] Add dark-mode and light-mode
-- [X] Save the theme to storage
-- [X] Change the color of the card-total depending on the color
-- [ ] Add custom error message
-- [ ] Refactor.
-- [ ] Improve responsiveness;
+- [X] Add dark-mode and light-mode;
+- [X] Save the theme to storage;
+- [X] Change the color of the card-total depending on the color;
+- [ ] Add custom error message;
+- [ ] Refactor;
+- [ ] Improve responsiveness.
 
 ## 📂 Directory structure
 
