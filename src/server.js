@@ -1,33 +1,38 @@
 // Modules and dependencies
 require('dotenv').config()
-const nunjucks = require('nunjucks')
-const path = require('path')
+
 const express = require('express')
-const app = express()
+const server = express()
+const router = express.Router()
+
+const nunjucks = require('nunjucks')
+const { join } = require('path')
 
 // Port
 const PORT = process.env.PORT || 8080
 
 // Nunjucks configuration
-nunjucks.configure(path.join(__dirname, '/../public/pages'), {
-  express: app,
+nunjucks.configure(join(__dirname, '/../public/pages'), {
+  express: server,
   noCache: true
 })
 
 // Static files
-app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, '/../public/')))
+server.use(express.urlencoded({ extended: true }))
+server.use(express.static(join(__dirname, '/../public/')))
+server.use(router)
 
 // Routes
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
   res.render('index.html')
 })
 
-app.get('*', (req, res) => {
+router.get('*', (req, res) => {
   res.render('page-not-found.html')
 })
 
-app.listen(PORT, (err) => {
+// Running server
+server.listen(PORT, (err) => {
   if (err) { console.log('erro') }
   console.log(`Server running on localhost:${PORT}`)
 })

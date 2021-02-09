@@ -1,12 +1,3 @@
-a {
-  color: $color-secondary;
-  text-decoration: none;
-
-  &:hover {
-    color: $color-secondary-dark;
-  }
-}
-
 button {
   cursor: pointer;
   border: none;
@@ -50,6 +41,8 @@ button {
     color: $red;
     border: 2px solid $red;
     border-radius: 0.25rem;
+
+    background-color: inherit;
 
     @include flex(flex, center, center, row);
 

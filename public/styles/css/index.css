@@ -44,14 +44,6 @@ h2 {
   font-weight: normal;
 }
 
-a {
-  color: #04D361;
-  text-decoration: none;
-}
-a:hover {
-  color: #02b553;
-}
-
 button {
   cursor: pointer;
   border: none;
@@ -91,6 +83,7 @@ button {
   color: #E92929;
   border: 2px solid #E92929;
   border-radius: 0.25rem;
+  background-color: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
