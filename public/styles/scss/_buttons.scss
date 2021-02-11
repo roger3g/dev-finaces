@@ -92,5 +92,10 @@ button {
     &:checked + label #ball {
       transform: translateX(24px);
     }
+
+    &:checked + label {
+      background-color: $color-text-table;
+      transition: background-color 200ms;
+    }
   }
 }

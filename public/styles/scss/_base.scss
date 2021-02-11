@@ -7,13 +7,13 @@
 
 $color-primary: #8257E5;
 $color-secondary: #04D361;
-$color-secondary-dark: #02b553;
+$color-secondary-dark: #02B553;
 $color-background: #F0F0F7;
 $white: #FFFFFF;
 $green: #12A454;
 $red: #E92929;
 $color-title: #32264D;
-$color-text-white: #efefef;
+$color-text-white: #EFEFEF;
 $color-text-dark: #363F5F;
 $color-text-table: #7D8195;
 
@@ -24,7 +24,7 @@ $color-text-table: #7D8195;
 }
 
 html {
-  font-size: 93.75%; /*15px*/
+  font-size: 93.75%;
 
   &::-webkit-scrollbar {
     width: 0.3rem;
