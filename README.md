@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=author&message=roger3g&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=languages&message=3&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=platform&message=web&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/stars/roger3g/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/issues/roger3g/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/forks/roger3g/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/last-commit/roger3g/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/repo-size/roger3g/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;">
+  <img src="https://img.shields.io/static/v1?label=author&message=abantes&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=languages&message=3&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=platform&message=web&color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/stars/abantes/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/issues/abantes/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/forks/abantes/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/last-commit/abantes/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;"> <img src="https://img.shields.io/github/repo-size/abantes/dev-finances?color=F0F0F7&labelColor=8257E5" style="display: inline;">
 </p>
 
 <div align="center">
@@ -73,7 +73,7 @@ You will need [Nodejs](https://nodejs.org/en/) and [git](https://git-scm.com/) i
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/roger3g/dev-finances.git
+$ git clone https://github.com/abantes/dev-finances.git
 
 # Access the project folder in the cmd/terminal
 $ cd dev-finances
@@ -99,7 +99,7 @@ $ npm run dev:server
 
 After the merge of your pull request is done, you can delete your branch.
 
-You can report a bug [here](https://github.com/roger3g/dev-finances/issues).
+You can report a bug [here](https://github.com/abantes/dev-finances/issues).
 
 ## 📝 License
 
